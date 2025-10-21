@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Church of Pentecost Dzodze - Digital Ministry Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Background image with dark overlay */
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('edy.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+    .page-header {
+      background: transparent;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+    }
+    .logo-left {
+      height: 60px;
+      width: auto;
+      margin-right: 20px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .header-text {
+      text-align: left;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.85);
+      color: #222;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .contact-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      color: #222;
+    }
+    .contact-icon {
+      font-size: 40px;
+      color: #007bff;
+    }
+    .contact-link,
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-link:hover,
+    a:hover {
+      color: yellow;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .header-content {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .logo-left {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      .header-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page active" id="contact">
+    <div class="page-header">
+      <div class="header-content">
+        <img src="edy.png" alt="Logo" class="logo-left">
+        <div class="header-text">
+          <h1>Contact Us</h1>
+          <h4>Get in touch with us and become part of our growing digital ministry community</h4>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Phone</h3>
+          <p>Call us directly for immediate assistance</p>
+          <a href="tel:+233248418742" class="contact-link">0248 418 742</a>
+          <br>
+          <a href="tel:+233539639653" class="contact-link">0539 639 653</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>Send us an email for detailed inquiries</p>
+          <a href="mailto:info@copdzodze.org" class="contact-link">info@copdzodze.org</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Location</h3>
+          <p>Visit us at our physical location</p>
+          <a href="https://www.google.com/maps/place/Dzodze,+Ghana" class="contact-link">Dzodze, Volta Region<br>Ghana, West Africa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Navigation functionality
+      const navLinks = document.querySelectorAll('.nav-link');
+      const pages = document.querySelectorAll('.page');
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetPage = document.querySelector(this.getAttribute('href'));
+          pages.forEach(page => page.classList.remove('active'));
+          if (targetPage) targetPage.classList.add('active');
+        });
+      });
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+          document.body.classList.toggle('mobile-menu-open');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
