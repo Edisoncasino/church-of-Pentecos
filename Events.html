@@ -6,10 +6,17 @@
     <title>Church of Pentecost Weekly Activities</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-    document.getElementById('homeBtn').addEventListener('click', function() {
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('homeBtn') || document.querySelector('.home-button') || document.querySelector('.nav-link[href="home.html"]');
+    if (btn) {
+      btn.addEventListener('click', function(e) {
+        // prevent default if the target is a link, then navigate explicitly
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
         window.location.href = 'home.html';
-    });
+      });
+    }
+  });
 </script>
 
     <style>
@@ -20,14 +27,14 @@
             color: #333;
         }
         header {
-            background: #002366;
+            background: linear-gradient(to right, #1a237e, #303f9f);
             color: white;
-            padding: 20px 60px;
-            text-align: center;
-            font-size: 2em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            position: relative;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .container {
             padding: 30px;
@@ -100,15 +107,73 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             background: #f0f0f0;
         }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 60px;
+            background: #002366;
+            color: white;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ffd700;
+            object-fit: cover;
+        }
+
+        .navigation {
+            margin-left: auto;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 0.7rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: #ffd700;
+            color: #1a237e;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <button id="homeBtn" class="home-button">
-        <i class="fas fa-home"></i> Home
-    </button>
-    Church of Pentecost - Weekly Activities & Events
+<header class="header">
+    <div class="logo-section">
+        <img src="edy.png" alt="Church Logo" class="logo">
+    </div>
+    <div class="header-content">
+        <h1>Church of Pentecost - Weekly Activities & Events</h1>
+    </div>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="events.html" class="nav-link active">Events</a></li>
+            <li><a href="about-us.html" class="nav-link">About-Us</a></li>
+        </ul>
+    </nav>
 </header>
 
 <div class="container">
