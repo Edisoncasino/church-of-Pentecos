@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Church of Pentecost Weekly Activities</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('homeBtn') || document.querySelector('.home-button') || document.querySelector('.nav-link[href="home.html"]');
-    if (btn) {
-      btn.addEventListener('click', function(e) {
-        // prevent default if the target is a link, then navigate explicitly
-        if (e && typeof e.preventDefault === 'function') e.preventDefault();
-        window.location.href = 'home.html';
-      });
-    }
-  });
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var btn = document.getElementById('homeBtn') || document.querySelector('.home-button') || document.querySelector('.nav-link[href="home.html"]');
+            if (btn) {
+                btn.addEventListener('click', function (e) {
+                    // prevent default if the target is a link, then navigate explicitly
+                    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+                    window.location.href = 'home.html';
+                });
+            }
+        });
+    </script>
 
     <style>
         body {
@@ -26,6 +27,7 @@
             background: #f5f7fa;
             color: #333;
         }
+
         header {
             background: linear-gradient(to right, #1a237e, #303f9f);
             color: white;
@@ -34,36 +36,44 @@
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
         .container {
             padding: 30px;
             display: grid;
             gap: 30px;
         }
+
         .section {
             background: white;
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             transition: transform 0.3s;
         }
+
         .section:hover {
             transform: translateY(-5px);
         }
+
         h2 {
             color: #002366;
             margin-top: 0;
         }
-        ul, ol {
+
+        ul,
+        ol {
             padding-left: 20px;
         }
+
         .calendar {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
+
         .calendar-day {
             background: #002366;
             color: white;
@@ -73,15 +83,18 @@
             font-weight: bold;
             transition: background 0.3s;
         }
+
         .calendar-day:hover {
             background: #001244;
         }
+
         footer {
             text-align: center;
             padding: 20px;
             font-size: 0.9em;
             color: #777;
         }
+
         .home-button {
             position: absolute;
             top: 10px;
@@ -94,7 +107,7 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -104,7 +117,7 @@
 
         .home-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             background: #f0f0f0;
         }
 
@@ -149,91 +162,94 @@
             transition: all 0.3s ease;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover,
+        .nav-link.active {
             background: #ffd700;
             color: #1a237e;
         }
     </style>
 </head>
+
 <body>
 
-<header class="header">
-    <div class="logo-section">
-        <img src="edy.png" alt="Church Logo" class="logo">
-    </div>
-    <div class="header-content">
-        <h1>Church of Pentecost - Weekly Activities & Events</h1>
-    </div>
-    <nav class="navigation">
-        <ul class="nav-list">
-            <li><a href="home.html" class="nav-link">Home</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="sermons.html" class="nav-link">Sermons</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="events.html" class="nav-link active">Events</a></li>
-            <li><a href="about-us.html" class="nav-link">About-Us</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="container">
-
-    <div class="section">
-        <h2>Weekly Activities</h2>
-        <ul>
-            <li>Sunday Worship Service - 9:00 AM</li>
-            <li>Monday Bible Study - 6:30 PM</li>
-            <li>Tuesday Choir Practice - 5:00 PM</li>
-            <li>Wednesday Midweek Prayer Service - 6:30 PM</li>
-            <li>Friday All-Night Prayer - 10:00 PM</li>
-            <li>Saturday Evangelism Outreach - 3:00 PM</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>General Church Activities</h2>
-        <ol>
-            <li>Annual Youth Conference</li>
-            <li>Marriage Blessing Ceremonies</li>
-            <li>Church Conventions & Crusades</li>
-            <li>Women's Ministry Week</li>
-            <li>Children's Service Special Programs</li>
-            <li>Pastoral Retreats</li>
-        </ol>
-    </div>
-
-    <div class="section">
-        <h2>Public Holidays in Ghana (2025)</h2>
-        <ul>
-            <li>New Year's Day - January 1</li>
-            <li>Independence Day - March 6</li>
-            <li>Good Friday - April 18</li>
-            <li>Easter Monday - April 21</li>
-            <li>May Day (Workers' Day) - May 1</li>
-            <li>Republic Day - July 1</li>
-            <li>Founder's Day - August 4</li>
-            <li>Kwame Nkrumah Memorial Day - September 21</li>
-            <li>Farmer's Day - December 5</li>
-            <li>Christmas Day - December 25</li>
-            <li>Boxing Day - December 26</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Upcoming Events Calendar</h2>
-        <div class="calendar">
-            <div class="calendar-day">Apr 28<br>Children's Sunday</div>
-            <div class="calendar-day">May 5<br>Youth Outreach</div>
-            <div class="calendar-day">May 19<br>Choir Concert</div>
-            <div class="calendar-day">June 1<br>Women's Convention</div>
-            <div class="calendar-day">July 6<br>Church Picnic</div>
+    <header class="header">
+        <div class="logo-section">
+            <img src="edy.png" alt="Church Logo" class="logo">
         </div>
+        <div class="header-content">
+            <h1>Church of Pentecost - Weekly Activities & Events</h1>
+        </div>
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="events.html" class="nav-link active">Events</a></li>
+                <li><a href="about-us.html" class="nav-link">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>Weekly Activities</h2>
+            <ul>
+                <li>Sunday Worship Service - 9:00 AM</li>
+                <li>Monday Bible Study - 6:30 PM</li>
+                <li>Tuesday Choir Practice - 5:00 PM</li>
+                <li>Wednesday Midweek Prayer Service - 6:30 PM</li>
+                <li>Friday All-Night Prayer - 10:00 PM</li>
+                <li>Saturday Evangelism Outreach - 3:00 PM</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>General Church Activities</h2>
+            <ol>
+                <li>Annual Youth Conference</li>
+                <li>Marriage Blessing Ceremonies</li>
+                <li>Church Conventions & Crusades</li>
+                <li>Women's Ministry Week</li>
+                <li>Children's Service Special Programs</li>
+                <li>Pastoral Retreats</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Public Holidays in Ghana (2025)</h2>
+            <ul>
+                <li>New Year's Day - January 1</li>
+                <li>Independence Day - March 6</li>
+                <li>Good Friday - April 18</li>
+                <li>Easter Monday - April 21</li>
+                <li>May Day (Workers' Day) - May 1</li>
+                <li>Republic Day - July 1</li>
+                <li>Founder's Day - August 4</li>
+                <li>Kwame Nkrumah Memorial Day - September 21</li>
+                <li>Farmer's Day - December 5</li>
+                <li>Christmas Day - December 25</li>
+                <li>Boxing Day - December 26</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Upcoming Events Calendar</h2>
+            <div class="calendar">
+                <div class="calendar-day">Apr 28<br>Children's Sunday</div>
+                <div class="calendar-day">May 5<br>Youth Outreach</div>
+                <div class="calendar-day">May 19<br>Choir Concert</div>
+                <div class="calendar-day">June 1<br>Women's Convention</div>
+                <div class="calendar-day">July 6<br>Church Picnic</div>
+            </div>
+        </div>
+
     </div>
 
-</div>
-
-<footer>
-    &copy; 2025 Church of Pentecost. All rights reserved.
-</footer>
+    <footer>
+        &copy; 2025 Church of Pentecost. All rights reserved.
+    </footer>
 </body>
+
 </html>

@@ -540,9 +540,8 @@
     }
   </style>
   <style>
-    
     .header-content {
-      
+
       backdrop-filter: blur(10px);
       border-radius: 15px;
       padding: 1rem 2rem;
@@ -552,11 +551,13 @@
       align-items: center;
       justify-content: space-between;
     }
+
     .logo-container {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
+
     .logo {
       width: 48px;
       height: 48px;
@@ -566,22 +567,26 @@
       transition: var(--transition);
       background: #fff;
     }
+
     .logo:hover {
       transform: scale(1.08);
       box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
     }
+
     .brand-text {
       font-size: 1.3rem;
       font-weight: 700;
       color: var(--primary);
       letter-spacing: -0.5px;
     }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
       align-items: center;
     }
+
     nav a {
       color: rgb(16, 16, 241);
       text-decoration: none;
@@ -592,20 +597,25 @@
       transition: var(--transition);
       position: relative;
     }
-    nav a:hover, nav a.active {
+
+    nav a:hover,
+    nav a.active {
       background: #ffffff;
       color: var(--primary);
       transform: translateY(-2px);
     }
-    nav  {
+
+    nav {
       color: blurple;
       font-weight: 600;
     }
+
     nav a.cta:hover {
       background: #ffffff;
       transform: translateY(-2px) scale(1.05);
       color: var(--primary);
     }
+
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -614,15 +624,18 @@
       color: var(--primary);
       cursor: pointer;
     }
+
     .page-content {
       margin-top: 90px;
       min-height: calc(100vh - 90px);
     }
+
     .page-header {
       position: relative;
       padding: 3rem 0;
       margin-bottom: 4rem;
     }
+
     .page-header::after {
       content: '';
       position: absolute;
@@ -634,48 +647,84 @@
       background: var(--gradient);
       border-radius: 2px;
     }
+
     .page-header h1 {
       color: var(--primary);
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
     .container {
       max-width: 1200px;
       margin: auto;
       padding: 0 1rem;
     }
-    
+
     /* Responsive */
     @media (max-width: 900px) {
-      .header-content { padding: 0 1rem; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
+      .header-content {
+        padding: 0 1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
-    
+
     @media (max-width: 600px) {
-      .header-content { flex-direction: column; gap: 10px; }
-      .brand-text { font-size: 1.1rem; }
-      .services-grid { grid-template-columns: 1fr; }
-      .page-header h1 { font-size: 1.5rem; }
-      nav ul { flex-direction: column; gap: 1rem; }
-      .mobile-menu-btn { display: block; }
-      nav ul { display: none; }
-      nav ul.open { display: flex; }
+      .header-content {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .brand-text {
+        font-size: 1.1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       /* Background image with dark overlay */
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('edy.png') no-repeat center center fixed;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('edy.png') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
     }
+
     .page {
       display: none;
     }
+
     .page.active {
       display: block;
     }
+
     .page-header {
       background: transparent;
       color: white;
@@ -686,6 +735,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .header-content {
       display: flow;
       align-items: center;
@@ -693,66 +743,76 @@
       width: 100%;
       gap: 20px;
     }
+
     .logo-left {
       height: 60px;
       width: auto;
       margin-right: 20px;
       object-fit: contain;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
+
     .header-text {
       text-align: right;
     }
+
     .container {
       width: 90%;
       max-width: 1200px;
       margin: auto;
       padding: 20px;
-      background: rgba(255,255,255,0.85);
+      background: rgba(255, 255, 255, 0.85);
       color: #222;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
+
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
     }
+
     .contact-card {
       background-color: white;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       padding: 20px;
       text-align: center;
       color: #222;
     }
+
     .contact-icon {
       font-size: 40px;
       color: #007bff;
     }
+
     .contact-link,
     a {
       color: #007bff;
       text-decoration: none;
       transition: color 0.2s;
     }
+
     .contact-link:hover,
     a:hover {
       color: yellow;
       text-decoration: underline;
     }
+
     @media (max-width: 600px) {
       .header-content {
         flex-direction: column;
         gap: 10px;
       }
+
       .logo-left {
         margin-right: 0;
         margin-bottom: 10px;
       }
-     
+
     }
   </style>
   <script>
@@ -769,8 +829,8 @@
       <div class="logo-container">
         <img src="edy.png" alt="Church Logo" class="logo">
         <div class="brand-text">COP Dzodze</div>
-      </nav>
-    </div>
+        </nav>
+      </div>
   </header>
   <header>
     <div class="header-content">
@@ -812,10 +872,11 @@
         </div>
       </section>
     </div>
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Church of Pentecost Dzodze Digital Ministry. Transforming lives through technology.</p>
-    </div>
-  </body>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Church of Pentecost Dzodze Digital Ministry. Transforming lives through technology.</p>
+      </div>
+</body>
 </footer>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,37 +13,138 @@
       --light: #f9f9f9;
       --dark: #1c1c1c;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(--dark); }
-    header { background: var(--primary); color: #fff; padding: 2rem 1rem; text-align: center; }
-    header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
-    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-    h2.section-title { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 1rem; margin-bottom: 1.5rem; font-size: 1.8rem; }
-    .live-sermon iframe { width: 100%; height: 480px; border-radius: 12px; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-    .search-bar input { width: 100%; padding: .75rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; margin: 2rem 0; }
-    .sermons { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 2rem; }
-    .sermon { background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); overflow: hidden; transition: transform .3s; }
-    .sermon:hover { transform: translateY(-5px); }
-    .sermon iframe, .sermon audio { width: 100%; height: 200px; border: none; }
-    .sermon-info { padding: 1rem; }
-    .sermon-info h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: .5rem; }
-    .sermon-info p { margin: .3rem 0; font-size: .9rem; }
-    .sermon-info a { display: inline-block; margin-top: .5rem; color: var(--accent); text-decoration: none; font-weight: 600; }
-    footer { text-align: center; padding: 2rem 1rem; background: var(--primary); color: #fff; margin-top: 4rem; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2.section-title {
+      color: var(--primary);
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .live-sermon iframe {
+      width: 100%;
+      height: 480px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: .75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      margin: 2rem 0;
+    }
+
+    .sermons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .sermon {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform .3s;
+    }
+
+    .sermon:hover {
+      transform: translateY(-5px);
+    }
+
+    .sermon iframe,
+    .sermon audio {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .sermon-info {
+      padding: 1rem;
+    }
+
+    .sermon-info h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: .5rem;
+    }
+
+    .sermon-info p {
+      margin: .3rem 0;
+      font-size: .9rem;
+    }
+
+    .sermon-info a {
+      display: inline-block;
+      margin-top: .5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--primary);
+      color: #fff;
+      margin-top: 4rem;
+    }
+
     .video-wrapper {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
       height: 0;
       overflow: hidden;
       border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       margin-bottom: 1rem;
     }
+
     .video-wrapper iframe {
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+
     .header-content {
       display: flex;
       justify-content: space-between;
@@ -51,46 +153,56 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
+
     .logo-container {
       display: flex;
       align-items: center;
     }
+
     .logo {
       height: 50px;
       margin-right: 1rem;
     }
+
     .brand-text {
       font-size: 1.5rem;
       font-weight: 600;
       color: #ffd700;
     }
+
     nav ul {
       display: flex;
       list-style: none;
     }
+
     nav ul li {
       margin: 0 1rem;
     }
+
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav ul li a.active {
       border-bottom: 2px solid #ffd700;
       padding-bottom: 0.5rem;
     }
+
     .error {
       color: red;
       text-align: center;
       margin: 2rem 0;
     }
+
     .loading {
       text-align: center;
       margin: 2rem 0;
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="header-content">
@@ -116,13 +228,8 @@
       <div class="sermon-container">
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe 
-              title="Sunday Sermon: [Title]"
-              height="200" 
-              width="100%" 
-              src="https://www.youtube.com/embed/9hJ-lO4WPYE"
-              allowfullscreen
-              aria-label="Video player for sermon">
+            <iframe title="Sunday Sermon: [Title]" height="200" width="100%"
+              src="https://www.youtube.com/embed/9hJ-lO4WPYE" allowfullscreen aria-label="Video player for sermon">
             </iframe>
           </div>
           <div class="sermon-info">
@@ -133,7 +240,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/z4_LdUtBHeY?si=li9W5HhJ1BQ6yUoo" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/z4_LdUtBHeY?si=li9W5HhJ1BQ6yUoo"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -143,7 +251,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/8H4jLQk2EC4?si=dkAJ8r46q3_BGX2m" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/8H4jLQk2EC4?si=dkAJ8r46q3_BGX2m"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -153,7 +262,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/QyExhJms0RM?si=pIqaEhu3N39CjzUp" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/QyExhJms0RM?si=pIqaEhu3N39CjzUp"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -163,7 +273,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/kRKkNUUi_wg?si=iFXykq4tAlIatLr8" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/kRKkNUUi_wg?si=iFXykq4tAlIatLr8"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -173,7 +284,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/kRKkNUUi_wg?si=cRwWPyZTd3AomiDg" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/kRKkNUUi_wg?si=cRwWPyZTd3AomiDg"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -183,7 +295,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/5f6U3PIpSbA?si=ovhJl7GcCUU59042" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/5f6U3PIpSbA?si=ovhJl7GcCUU59042"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -193,7 +306,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/X8u89zBQvYI?si=5-YwoeQ2JQtCM1gP" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/X8u89zBQvYI?si=5-YwoeQ2JQtCM1gP"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -203,7 +317,8 @@
         </div>
         <div class="sermon">
           <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/CJLcJi2xLgM?si=fn-Iw3QXgaRLoGfd" allowfullscreen></iframe>
+            <iframe height="200" width="100%" src="https://www.youtube.com/embed/CJLcJi2xLgM?si=fn-Iw3QXgaRLoGfd"
+              allowfullscreen></iframe>
           </div>
           <div class="sermon-info">
             <h3>Title of Sermon</h3>
@@ -213,13 +328,10 @@
         </div>
       </div>
     </section>
-    
+
     <section class="search-bar">
       <label for="searchInput" class="visually-hidden">Search sermons</label>
-      <input 
-        type="text" 
-        id="searchInput"
-        aria-label="Search sermons by title, preacher, or date"
+      <input type="text" id="searchInput" aria-label="Search sermons by title, preacher, or date"
         placeholder="Search sermons by title, preacher, or date...">
     </section>
     <section class="previous-sermons">
@@ -257,60 +369,61 @@
   -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-  // Initialize sermons
-  loadSermons().catch(err => {
-    console.error('Failed to load sermons:', err);
-    document.getElementById('sermonList').innerHTML = 
-      '<p class="error">Failed to load sermons. Please try again later.</p>';
-  });
+      // Initialize sermons
+      loadSermons().catch(err => {
+        console.error('Failed to load sermons:', err);
+        document.getElementById('sermonList').innerHTML =
+          '<p class="error">Failed to load sermons. Please try again later.</p>';
+      });
 
-  // Search functionality
-  const searchInput = document.getElementById('searchInput');
-  searchInput.addEventListener('input', debounce(handleSearch, 300));
+      // Search functionality
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('input', debounce(handleSearch, 300));
 
-  // Optional fullscreen button
-  const fullscreenBtn = document.getElementById('fullscreenBtn');
-  if (fullscreenBtn) {
-    fullscreenBtn.addEventListener('click', toggleFullscreen);
-  }
-});
+      // Optional fullscreen button
+      const fullscreenBtn = document.getElementById('fullscreenBtn');
+      if (fullscreenBtn) {
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+      }
+    });
 
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
 
-function handleSearch() {
-  const filter = this.value.toLowerCase();
-  const sermons = document.querySelectorAll('.sermon');
-  
-  sermons.forEach(sermon => {
-    const text = sermon.textContent.toLowerCase();
-    sermon.style.display = text.includes(filter) ? '' : 'none';
-  });
-}
+    function handleSearch() {
+      const filter = this.value.toLowerCase();
+      const sermons = document.querySelectorAll('.sermon');
 
-async function loadSermons() {
-  const list = document.getElementById('sermonList');
-  list.innerHTML = '<p class="loading">Loading sermons...</p>';
-  
-  try {
-    const res = await fetch('sermons.json');
-    if (!res.ok) throw new Error('Failed to fetch sermons');
-    const data = await res.json();
-    renderSermons(data);
-  } catch (err) {
-    throw err;
-  }
-}
+      sermons.forEach(sermon => {
+        const text = sermon.textContent.toLowerCase();
+        sermon.style.display = text.includes(filter) ? '' : 'none';
+      });
+    }
 
-    </script>
+    async function loadSermons() {
+      const list = document.getElementById('sermonList');
+      list.innerHTML = '<p class="loading">Loading sermons...</p>';
+
+      try {
+        const res = await fetch('sermons.json');
+        if (!res.ok) throw new Error('Failed to fetch sermons');
+        const data = await res.json();
+        renderSermons(data);
+      } catch (err) {
+        throw err;
+      }
+    }
+
+  </script>
 </body>
+
 </html>
