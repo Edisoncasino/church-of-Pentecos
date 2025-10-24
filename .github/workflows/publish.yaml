@@ -19,13 +19,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Build And Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.DEPLOYMENT_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ github.token }} # Used for GitHub integrations (i.e., PR comments)
           action: "upload"
-          app_location: "/src"  # or "/" if files are in root
+          app_location: "/"  # or "/" if files are in root
           api_location: ""          # optional
           output_location: ""       # optional
