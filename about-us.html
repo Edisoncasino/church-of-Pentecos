@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn about the history, beliefs, and core values of The Church of Pentecost. Discover our journey from 1937 to present day.">
+    <title>History of The Church of Pentecost</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Poppins', sans-serif;
+          background: #f4f7f8;
+          color: #333;
+          line-height: 1.6;
+        }
+        
+        /* Header */
+        .header {
+          background: linear-gradient(to right, #1a237e, #303f9f); /* New professional blue gradient */
+          color: white;
+          padding: 0.8rem 2rem;
+          position: relative;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 2rem;
+        }
+        
+        .logo-section {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+        
+        .logo {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid #ffd700;
+          object-fit: cover;
+        }
+        
+        .header-content {
+          flex-grow: 1;
+        }
+        
+        .header h1 {
+          font-size: 1.8rem;
+          margin-bottom: 0.2rem;
+          color: #ffffff;
+        }
+        
+        .header .subtitle {
+          font-size: 0.9rem;
+          color: #ffd700;
+          text-shadow: none;
+        }
+        
+        /* Navigation */
+        .navigation {
+            margin-left: auto; /* Pushes navigation to the right */
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 0.4rem 1rem; /* Reduced from 0.8rem 1.5rem */
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.8rem; /* Reduced from 0.9rem */
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link.active {
+            background: #ffd700;
+            color: #1a237e;
+            border-color: #ffd700;
+        }
+        
+        /* Main Content */
+        .content {
+          padding: 1rem;
+          max-width: 1100px;
+          margin: auto;
+        }
+        
+        /* Sections */
+        section {
+          margin-bottom: 3rem;
+        }
+        
+        /* Timeline */
+        .timeline {
+          margin-top: 1.5rem;
+          border-left: 3px solid #2575fc;
+          padding-left: 1rem;
+        }
+        
+        .event {
+          margin-bottom: 1rem;
+        }
+        
+        .event h3 {
+          color: #2575fc;
+          margin-bottom: 0.3rem;
+        }
+        
+        /* Beliefs List */
+        .beliefs-list {
+          list-style-type: square;
+          padding-left: 2rem;
+          margin-top: 1rem;
+        }
+        
+        /* Core Values */
+        .values-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+          margin-top: 1.5rem;
+        }
+        
+        .value-card {
+          background: white;
+          border-radius: 15px;
+          box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+          padding: 1.5rem;
+          text-align: center;
+          transition: transform 0.3s;
+        }
+        
+        .value-card:hover {
+          transform: translateY(-5px);
+        }
+        
+        .value-card h3 {
+          color: #6a11cb;
+          margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+          text-align: center;
+          background: #2575fc;
+          color: white;
+          padding: 1rem;
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+        }
+
+        @media (max-width: 768px) {
+        .header h1 {
+            font-size: 1.5rem; /* Reduced from 1.8rem */
+        }
+        
+        .header .subtitle {
+            font-size: 0.9rem; /* Reduced from 1rem */
+        }
+        
+        .navigation {
+            padding: 0.3rem 0;
+        }
+
+        .nav-link {
+            padding: 0.4rem 0.8rem;
+        }
+    }
+    </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo-section">
+        <img src="edy.png" alt="Church Logo" class="logo">
+    </div>
+    <div class="header-content">
+        <h1>The Church of Pentecost</h1>
+        <p class="subtitle">A Journey of Faith, Growth, and Spirit</p>
+    </div>
+    <nav class="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="about-us.html" class="nav-link active">About us</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <section class="history-section">
+      <h2>Our Beginnings</h2>
+      <p>
+        The Church of Pentecost traces its roots to 1937 with the arrival of Pastor James McKeown, an Irish missionary sent by the Apostolic Church, Bradford, UK. Facing challenges in the Gold Coast, doctrinal disagreements led to the formation of a new movement grounded in faith, resilience, and divine healing.
+      </p>
+      <div class="timeline">
+        <div class="event">
+          <h3>1937</h3>
+          <p>Pastor James McKeown arrives in the Gold Coast.</p>
+        </div>
+        <div class="event">
+          <h3>1939</h3>
+          <p>Group splits over doctrinal differences into Christ Apostolic Church and Apostolic Church, Gold Coast.</p>
+        </div>
+        <div class="event">
+          <h3>1953</h3>
+          <p>Founding of the Gold Coast Apostolic Church.</p>
+        </div>
+        <div class="event">
+          <h3>1962</h3>
+          <p>The name "The Church of Pentecost" is officially adopted.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="beliefs-section">
+      <h2>Beliefs and Tenets</h2>
+      <ul class="beliefs-list">
+        <li>The divine inspiration and authority of the Bible.</li>
+        <li>Existence of the One True God in the Triune Godhead.</li>
+        <li>Man’s need for salvation through Jesus Christ.</li>
+        <li>The sacraments of Baptism and the Lord’s Supper.</li>
+        <li>Baptism and Gifts of the Holy Spirit.</li>
+        <li>Divine Healing provided through atonement.</li>
+        <li>Faithfulness in tithes and offerings.</li>
+        <li>The Second Coming of Christ and Eternal Life.</li>
+      </ul>
+    </section>
+
+    <section class="core-values-section">
+      <h2>Our Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>Evangelism</h3>
+          <p>Sharing the Gospel to the ends of the Earth.</p>
+        </div>
+        <div class="value-card">
+          <h3>Discipleship</h3>
+          <p>Training believers to live Christ-like lives.</p>
+        </div>
+        <div class="value-card">
+          <h3>Ministry Excellence</h3>
+          <p>Honouring God with excellence in all we do.</p>
+        </div>
+        <div class="value-card">
+          <h3>Leadership</h3>
+          <p>Character-driven and Spirit-led leadership development.</p>
+        </div>
+        <div class="value-card">
+          <h3>Holy Spirit</h3>
+          <p>Living and ministering through the power of the Spirit.</p>
+        </div>
+        <div class="value-card">
+          <h3>Church Culture</h3>
+          <p>Self-supporting, prayerful, disciplined, and loving fellowship.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Church of Pentecost Dzodze. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
