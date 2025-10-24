@@ -26,6 +26,6 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.DEPLOYMENT_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/"  # or "/" if files are in root
+          app_location: "/src"  # or "/" if files are in root
           api_location: ""          # optional
           output_location: ""       # optional
