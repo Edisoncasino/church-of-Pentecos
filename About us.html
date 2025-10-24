@@ -119,16 +119,7 @@
       overflow: hidden;
     }
     
-    .header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-      opacity: 0.3;
-    }
+   
     
     .header h1 {
       font-size: 2.8rem;
@@ -147,7 +138,7 @@
       text-shadow: 1px 1px 2px rgb(233, 1, 1);
     }
     
-    .nav-buttons {
+    .nav-buttons.cta {
       display: flex;
       justify-content: center;
       gap: 1rem;
@@ -155,10 +146,10 @@
       margin-bottom: 1rem;
     }
     
-    .nav-btn {
+    .nav-btn.cta {
       display: inline-block;
       padding: 0.8rem 1.5rem;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(39, 24, 170, 0.76);
       color: white;
       text-decoration: none;
       border-radius: 50px;
@@ -178,7 +169,7 @@
     }
     
     .nav-btn.active {
-      background: #ffd700;
+      background: #ffffff;
       color: #002147;
       border-color: #ffd700;
     }
