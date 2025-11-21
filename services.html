@@ -21,14 +21,15 @@
   </script>
   <style>
     :root {
-      --primary: #19191b;
-      --secondary: #ff6b6b;
+      --primary: #1a237e;
+      --secondary: #ffd700;
       --accent: #4caf50;
       --background: #f8f9fa;
       --card-bg: #ffffff;
-      --text: #080808fb;
+      --text: #333333;
       --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      --gradient: linear-gradient(135deg, #1a237e 0%, #303f9f 100%);
+      --gradient: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+      --transition: all 0.3s ease;
     }
 
     * {
@@ -47,8 +48,7 @@
     }
 
     header {
-      background: yellow;
-      /* This should be consistent with other pages */
+      background: var(--gradient);
       padding: 1.5rem 0;
       position: fixed;
       width: 100%;
@@ -59,8 +59,6 @@
     }
 
     .header-content {
-      background: yellow;
-      /* Duplicate background color declaration */
       backdrop-filter: blur(10px);
       border-radius: 15px;
       padding: 1rem 2rem;
@@ -89,14 +87,25 @@
 
     .logo:hover {
       transform: scale(1.08);
-      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
     }
 
     .brand-text {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary);
-      letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      transition: var(--transition);
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .brand-text:hover {
+      transform: scale(1.05);
+      text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.6);
+      color: #ffd700;
     }
 
     nav ul {
@@ -107,7 +116,7 @@
     }
 
     nav a {
-      color: rgb(16, 16, 241);
+      color: #ffffff;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
@@ -119,14 +128,9 @@
 
     nav a:hover,
     nav a.active {
-      background: #ffffff;
+      background: var(--secondary);
       color: var(--primary);
       transform: translateY(-2px);
-    }
-
-    nav {
-      color: blue;
-      font-weight: 600;
     }
 
     nav a.cta:hover {
@@ -189,7 +193,7 @@
     .service-card {
       background: var(--card-bg);
       border-radius: 20px;
-      border: none;
+      border: 1px solid rgba(0, 0, 0, 0.05);
       box-shadow: var(--shadow);
       transform: translateY(0);
       transition: all 0.4s ease;
@@ -221,7 +225,7 @@
 
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     }
 
     .service-icon {
@@ -237,7 +241,7 @@
       justify-content: center;
       margin-left: auto;
       margin-right: auto;
-      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(26, 35, 126, 0.2);
     }
 
     .service-icon i {
@@ -264,7 +268,7 @@
     .btn:hover {
       background: var(--secondary);
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
     }
 
     /* Responsive */
@@ -327,6 +331,15 @@
         display: flex;
       }
     }
+
+    footer {
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
@@ -344,8 +357,8 @@
           <li><a href="services.html" class="active">Services</a></li>
           <li><a href="sermons.html">Sermons</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="Events.html" class="cta">Events</a></li>
-          <li><a href="About us.html" class="cta">About us</a></li>
+          <li><a href="events.html" class="cta">Events</a></li>
+          <li><a href="about-us.html" class="cta">About us</a></li>
 
         </ul>
       </nav>
@@ -467,6 +480,7 @@
     <div class="container">
       <p>&copy; 2024 Church of Pentecost Dzodze Digital Ministry. Transforming lives through technology.</p>
     </div>
-</body>
+  </footer>
+  </body>
 
 </html>
