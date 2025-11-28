@@ -5,206 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Church of Pentecost | Sermons</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #002147;
-      --accent: #ffd700;
-      --light: #f9f9f9;
-      --dark: #1c1c1c;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-    }
-
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: .5rem;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h2.section-title {
-      color: var(--primary);
-      border-left: 5px solid var(--accent);
-      padding-left: 1rem;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-    }
-
-    .live-sermon iframe {
-      width: 100%;
-      height: 480px;
-      border-radius: 12px;
-      border: none;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .search-bar input {
-      width: 100%;
-      padding: .75rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      margin: 2rem 0;
-    }
-
-    .sermons {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    .sermon {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      transition: transform .3s;
-    }
-
-    .sermon:hover {
-      transform: translateY(-5px);
-    }
-
-    .sermon iframe,
-    .sermon audio {
-      width: 100%;
-      height: 200px;
-      border: none;
-    }
-
-    .sermon-info {
-      padding: 1rem;
-    }
-
-    .sermon-info h3 {
-      font-size: 1.2rem;
-      color: var(--primary);
-      margin-bottom: .5rem;
-    }
-
-    .sermon-info p {
-      margin: .3rem 0;
-      font-size: .9rem;
-    }
-
-    .sermon-info a {
-      display: inline-block;
-      margin-top: .5rem;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: var(--primary);
-      color: #fff;
-      margin-top: 4rem;
-    }
-
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1rem;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo {
-      height: 50px;
-      margin-right: 1rem;
-    }
-
-    .brand-text {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #ffd700;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin: 0 1rem;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav ul li a.active {
-      border-bottom: 2px solid #ffd700;
-      padding-bottom: 0.5rem;
-    }
-
-    .error {
-      color: red;
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .loading {
-      text-align: center;
-      margin: 2rem 0;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="header">
     <div class="header-content">
       <div class="logo-container">
         <img src="edy.png" alt="Church Logo" class="logo">
@@ -212,118 +20,232 @@
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="sermons.html" class="active">Sermons</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="about-us.html">About us</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="sermons.html" class="nav-link active">Sermons</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="about-us.html" class="nav-link">About us</a></li>
         </ul>
       </nav>
     </div>
-  </header>
-  <main class="container">
-    <section class="live-sermon">
-      <h2 class="section-title">Live Sermon</h2>
-      <div class="sermon-container">
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe title="Sunday Sermon: [Title]" height="200" width="100%"
-              src="https://www.youtube.com/embed/9hJ-lO4WPYE" allowfullscreen aria-label="Video player for sermon">
-            </iframe>
+  </div>
+
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Sermons</li>
+    </ol>
+  </nav>
+
+  <section class="sermons-hero">
+    <div class="sermons-hero-content">
+      <h1>Inspiring Sermons for Spiritual Growth</h1>
+      <p>Discover powerful messages from our pastors and guest speakers. Watch live or explore our archive of transformative sermons.</p>
+      <a href="#live-sermon" class="btn">Watch Live Sermon</a>
+    </div>
+  </section>
+
+  <main id="main-content" class="container" role="main">
+    <section class="live-sermon" id="live-sermon">
+      <h2 class="section-title"><i class="fas fa-play-circle"></i> Live Sermon</h2>
+      <div class="sermons">
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe title="Sunday Sermon: Faith in Action" src="https://www.youtube.com/embed/9hJ-lO4WPYE" allowfullscreen aria-label="Video player for sermon"></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
           </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
-          </div>
-        </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/z4_LdUtBHeY?si=li9W5HhJ1BQ6yUoo"
-              allowfullscreen></iframe>
-          </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
-          </div>
-        </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/8H4jLQk2EC4?si=dkAJ8r46q3_BGX2m"
-              allowfullscreen></iframe>
-          </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
-          </div>
-        </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/QyExhJms0RM?si=pIqaEhu3N39CjzUp"
-              allowfullscreen></iframe>
-          </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Faith in Action</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Pastor John Doe</span>
+              <span><i class="fas fa-calendar"></i> 2025-05-31</span>
+            </div>
+            <p class="sermon-description">A powerful message on living out your faith in everyday life.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/kRKkNUUi_wg?si=iFXykq4tAlIatLr8"
-              allowfullscreen></iframe>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/z4_LdUtBHeY?si=li9W5HhJ1BQ6yUoo" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
           </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
-          </div>
-        </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/kRKkNUUi_wg?si=cRwWPyZTd3AomiDg"
-              allowfullscreen></iframe>
-          </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
-          </div>
-        </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/5f6U3PIpSbA?si=ovhJl7GcCUU59042"
-              allowfullscreen></iframe>
-          </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Grace and Mercy</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Evangelist Mary Smith</span>
+              <span><i class="fas fa-calendar"></i> 2025-05-24</span>
+            </div>
+            <p class="sermon-description">Understanding God's infinite grace in our lives.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/X8u89zBQvYI?si=5-YwoeQ2JQtCM1gP"
-              allowfullscreen></iframe>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/8H4jLQk2EC4?si=dkAJ8r46q3_BGX2m" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
           </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Walking in Faith</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Pastor David Lee</span>
+              <span><i class="fas fa-calendar"></i> 2025-05-17</span>
+            </div>
+            <p class="sermon-description">Steps to strengthen your faith journey.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="sermon">
-          <div class="video-wrapper">
-            <iframe height="200" width="100%" src="https://www.youtube.com/embed/CJLcJi2xLgM?si=fn-Iw3QXgaRLoGfd"
-              allowfullscreen></iframe>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/QyExhJms0RM?si=pIqaEhu3N39CjzUp" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
           </div>
-          <div class="sermon-info">
-            <h3>Title of Sermon</h3>
-            <p><strong>Preacher:</strong> Name</p>
-            <p><strong>Date:</strong> 2025-05-31</p>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Hope Eternal</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Evangelist Sarah Johnson</span>
+              <span><i class="fas fa-calendar"></i> 2025-05-10</span>
+            </div>
+            <p class="sermon-description">Finding hope in God's promises.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/kRKkNUUi_wg?si=iFXykq4tAlIatLr8" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Love and Compassion</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Pastor Michael Brown</span>
+              <span><i class="fas fa-calendar"></i> 2025-05-03</span>
+            </div>
+            <p class="sermon-description">Embracing God's love in our relationships.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/kRKkNUUi_wg?si=cRwWPyZTd3AomiDg" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Strength in Unity</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Pastor Robert Wilson</span>
+              <span><i class="fas fa-calendar"></i> 2025-04-26</span>
+            </div>
+            <p class="sermon-description">The power of community in faith.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/5f6U3PIpSbA?si=ovhJl7GcCUU59042" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Peace Beyond Understanding</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Evangelist Lisa Garcia</span>
+              <span><i class="fas fa-calendar"></i> 2025-04-19</span>
+            </div>
+            <p class="sermon-description">Finding peace in turbulent times.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/X8u89zBQvYI?si=5-YwoeQ2JQtCM1gP" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Joy in Service</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Pastor James Taylor</span>
+              <span><i class="fas fa-calendar"></i> 2025-04-12</span>
+            </div>
+            <p class="sermon-description">The blessings of serving others.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sermon-card">
+          <div class="sermon-thumbnail">
+            <iframe src="https://www.youtube.com/embed/CJLcJi2xLgM?si=fn-Iw3QXgaRLoGfd" allowfullscreen></iframe>
+            <div class="play-overlay"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="sermon-details">
+            <h3 class="sermon-title">Wisdom from Above</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user"></i> Guest Speaker Dr. Emily Chen</span>
+              <span><i class="fas fa-calendar"></i> 2025-04-05</span>
+            </div>
+            <p class="sermon-description">Seeking God's wisdom in decision-making.</p>
+            <div class="sermon-actions">
+              <a href="#" class="btn-sermon btn-watch">Watch Now</a>
+              <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -334,15 +256,85 @@
       <input type="text" id="searchInput" aria-label="Search sermons by title, preacher, or date"
         placeholder="Search sermons by title, preacher, or date...">
     </section>
+    <section class="category-filters" aria-label="Filter sermons by category">
+      <h3>Filter by Category</h3>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All Sermons</button>
+        <button class="filter-btn" data-category="faith">Faith</button>
+        <button class="filter-btn" data-category="hope">Hope</button>
+        <button class="filter-btn" data-category="love">Love</button>
+        <button class="filter-btn" data-category="wisdom">Wisdom</button>
+      </div>
+    </section>
     <section class="previous-sermons">
       <h2 class="section-title">Previous Sermons</h2>
       <div class="sermons" id="sermonList">
         <!-- Sermons will be loaded here dynamically -->
       </div>
     </section>
+
+    <section class="testimonials">
+      <h2 class="section-title">What Our Congregation Says</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p>"These sermons have transformed my spiritual journey. The messages are powerful and relevant."</p>
+          <cite>- Sarah M., Church Member</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"I look forward to every Sunday. The teachings bring peace and guidance to my life."</p>
+          <cite>- David K., Regular Attendee</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"The online sermons make it easy to stay connected even when I can't attend in person."</p>
+          <cite>- Maria L., Online Member</cite>
+        </blockquote>
+      </div>
+    </section>
   </main>
-  <footer>
-    &copy; 2025 Church of Pentecost. All rights reserved.
+
+  <section class="newsletter-signup">
+    <div class="container">
+      <h2>Stay Connected</h2>
+      <p>Subscribe to receive notifications about new sermons and church updates.</p>
+      <form class="newsletter-form" aria-label="Newsletter signup">
+        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+        <button type="submit" class="btn-newsletter">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Church of Pentecost Dzodze</h3>
+          <p>Transforming lives through faith, hope, and love.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Church of Pentecost Dzodze. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
   <!-- Include this JSON file alongside your HTML: sermons.json -->
   <!-- Example sermons.json:
@@ -368,6 +360,9 @@
   ]
   -->
   <script>
+    let allSermons = [];
+    let currentCategory = 'all';
+
     document.addEventListener('DOMContentLoaded', () => {
       // Initialize sermons
       loadSermons().catch(err => {
@@ -380,10 +375,25 @@
       const searchInput = document.getElementById('searchInput');
       searchInput.addEventListener('input', debounce(handleSearch, 300));
 
-      // Optional fullscreen button
-      const fullscreenBtn = document.getElementById('fullscreenBtn');
-      if (fullscreenBtn) {
-        fullscreenBtn.addEventListener('click', toggleFullscreen);
+      // Category filter functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentCategory = btn.dataset.category;
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterSermons();
+        });
+      });
+
+      // Newsletter form
+      const newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thank you for subscribing! You will receive updates about new sermons.');
+          e.target.reset();
+        });
       }
     });
 
@@ -401,11 +411,58 @@
 
     function handleSearch() {
       const filter = this.value.toLowerCase();
-      const sermons = document.querySelectorAll('.sermon');
+      const sermons = document.querySelectorAll('.sermon-card');
 
       sermons.forEach(sermon => {
         const text = sermon.textContent.toLowerCase();
         sermon.style.display = text.includes(filter) ? '' : 'none';
+      });
+    }
+
+    function filterSermons() {
+      let filtered = allSermons;
+      if (currentCategory !== 'all') {
+        filtered = allSermons.filter(sermon => sermon.category === currentCategory);
+      }
+      renderSermons(filtered);
+    }
+
+    function renderSermons(sermons) {
+      const list = document.getElementById('sermonList');
+      list.innerHTML = '';
+
+      sermons.forEach(sermon => {
+        const sermonCard = document.createElement('div');
+        sermonCard.className = 'sermon-card';
+
+        const thumbnail = sermon.type === 'video' ?
+          `<iframe src="${sermon.url}" allowfullscreen loading="lazy" title="${sermon.title}"></iframe>` :
+          `<audio controls aria-label="${sermon.title}"><source src="${sermon.url}" type="audio/mpeg"></audio>`;
+
+        sermonCard.innerHTML = `
+          <div class="sermon-thumbnail">
+            ${thumbnail}
+            <div class="play-overlay" aria-hidden="true"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="sermon-details">
+            <h3 class="sermon-title">${sermon.title}</h3>
+            <div class="sermon-meta">
+              <span><i class="fas fa-user" aria-hidden="true"></i> ${sermon.preacher}</span>
+              <span><i class="fas fa-calendar" aria-hidden="true"></i> ${sermon.date}</span>
+            </div>
+            <p class="sermon-description">${sermon.scripture ? `Scripture: ${sermon.scripture}` : 'A powerful message for spiritual growth.'}</p>
+            <div class="sermon-actions">
+              <a href="${sermon.url}" class="btn-sermon btn-watch" target="_blank" aria-label="Watch or listen to ${sermon.title}">Watch/Listen</a>
+              <div class="social-share" aria-label="Share this sermon">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" class="social-btn facebook" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(sermon.title)}&url=${encodeURIComponent(window.location.href)}" class="social-btn twitter" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://wa.me/?text=${encodeURIComponent(sermon.title + ' ' + window.location.href)}" class="social-btn whatsapp" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        `;
+
+        list.appendChild(sermonCard);
       });
     }
 
@@ -416,8 +473,8 @@
       try {
         const res = await fetch('sermons.json');
         if (!res.ok) throw new Error('Failed to fetch sermons');
-        const data = await res.json();
-        renderSermons(data);
+        allSermons = await res.json();
+        filterSermons();
       } catch (err) {
         throw err;
       }

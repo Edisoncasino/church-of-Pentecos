@@ -5,410 +5,215 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Church of Pentecost Dzodze - Digital Ministry Platform</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #19191b;
-      --secondary: #ff6b6b;
-      --accent: #4caf50;
-      --background: #f8f9fa;
-      --card-bg: #ffffff;
-      --text: #080808fb;
-      --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      --gradient: linear-gradient(135deg, #1a237e 0%, #303f9f 100%);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--background);
-      color: var(--text);
-      min-height: 100vh;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: white;
-      padding: 1.5rem 0;
-      position: flow;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      transition: var(--transition);
-      box-shadow: var(--shadow);
-    }
-
-    .header-content {
-
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 1rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--secondary);
-      transition: var(--transition);
-      background: #fff;
-    }
-
-    .logo:hover {
-      transform: scale(1.08);
-      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-    }
-
-    .brand-text {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary);
-      letter-spacing: -0.5px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    nav a {
-      color: rgb(16, 16, 241);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: var(--transition);
-      position: relative;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background: #ffffff;
-      color: var(--primary);
-      transform: translateY(-2px);
-    }
-
-    nav {
-      color: blue;
-      font-weight: 600;
-    }
-
-    nav a.cta:hover {
-      background: #ffffff;
-      transform: translateY(-2px) scale(1.05);
-      color: var(--primary);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--primary);
-      cursor: pointer;
-    }
-
-    .page-content {
-      margin-top: 90px;
-      min-height: calc(100vh - 90px);
-    }
-
-    .page-header {
-      position: relative;
-      padding: 3rem 0;
-      margin-bottom: 4rem;
-    }
-
-    .page-header::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 4px;
-      background: var(--gradient);
-      border-radius: 2px;
-    }
-
-    .page-header h1 {
-      color: var(--primary);
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .header-content {
-        padding: 0 1rem;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .header-content {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .brand-text {
-        font-size: 1.1rem;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-header h1 {
-        font-size: 1.5rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-      }
-
-      nav ul.open {
-        display: flex;
-      }
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      /* Background image with dark overlay */
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('edy.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-    }
-
-    .page {
-      display: none;
-    }
-
-    .page.active {
-      display: block;
-    }
-
-    .page-header {
-      background: transparent;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .header-content {
-      display: flow;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      gap: 20px;
-    }
-
-    .logo-left {
-      height: 60px;
-      width: auto;
-      margin-right: 20px;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .header-text {
-      text-align: left;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.85);
-      color: #222;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .contact-card {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-      color: #222;
-    }
-
-    .contact-icon {
-      font-size: 40px;
-      color: #007bff;
-    }
-
-    .contact-link,
-    a {
-      color: #007bff;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .contact-link:hover,
-    a:hover {
-      color: yellow;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      .header-content {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .logo-left {
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-
-      .header-text {
-        text-align: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Contact form handling
+      const contactForm = document.querySelector('.contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Thank you for your message! We will get back to you soon.');
+          this.reset();
+        });
+      }
 
+      // Newsletter form handling
+      const newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Thank you for subscribing! You will receive updates soon.');
+          this.reset();
+        });
+      }
+
+      // Form validation enhancement
+      const formInputs = document.querySelectorAll('input, textarea');
+      formInputs.forEach(input => {
+        input.addEventListener('blur', function () {
+          if (this.checkValidity()) {
+            this.classList.remove('invalid');
+            this.classList.add('valid');
+          } else {
+            this.classList.remove('valid');
+            this.classList.add('invalid');
+          }
+        });
+      });
+    });
+  </script>
 <body>
-  <header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="header">
     <div class="header-content">
       <div class="logo-container">
-        <img src="edy.png" alt="Logo" class="logo">
+        <img src="edy.png" alt="Church of Pentecost Dzodze Logo" class="logo">
         <span class="brand-text">Church of Pentecost Dzodze</span>
       </div>
       <nav>
-        <ul id="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="Events.html" class="cta">Events</a></li>
-          <li><a href="about us.html" class="cta">About us</a></li>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="about-us.html" class="nav-link">About us</a></li>
         </ul>
       </nav>
     </div>
-  </header>
-  <div class="page active" id="contact">
-    <div class="page-header">
-      <div class="header-content">
-        <img src="edy.png" alt="Logo" class="logo-left">
-        <div class="header-text">
-          <h1>Contact Us</h1>
-          <h2>Get in touch with us and become part of our growing digital ministry community</h2>
-        </div>
-      </div>
+  </div>
+
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Contact</li>
+    </ol>
+  </nav>
+
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you. Reach out for prayer, support, or to learn more about our community.</p>
     </div>
-    <div class="container">
+  </section>
+
+  <main id="main-content" class="container" role="main">
+    <section class="contact-info">
+      <h2 class="section-title"><i class="fas fa-address-book"></i> Contact Information</h2>
       <div class="contact-grid">
         <div class="contact-card">
           <div class="contact-icon">
-            <i class="fas fa-phone"></i>
+            <i class="fas fa-phone" aria-hidden="true"></i>
           </div>
           <h3>Phone</h3>
           <p>Call us directly for immediate assistance</p>
-          <a href="tel:+233248418742" class="contact-link">0248 418 742</a>
-          <br>
-          <a href="tel:+233539639653" class="contact-link">0539 639 653</a>
+          <a href="tel:+233248418742" class="contact-link" aria-label="Call us at 0248 418 742">0248 418 742</a><br>
+          <a href="tel:+233539639653" class="contact-link" aria-label="Call us at 0539 639 653">0539 639 653</a>
         </div>
         <div class="contact-card">
           <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
           </div>
           <h3>Email</h3>
           <p>Send us an email for detailed inquiries</p>
-          <a href="mailto:info@copdzodze.org" class="contact-link">info@copdzodze.org</a>
+          <a href="mailto:info@copdzodze.org" class="contact-link" aria-label="Email us at info@copdzodze.org">info@copdzodze.org</a>
         </div>
         <div class="contact-card">
           <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-clock" aria-hidden="true"></i>
+          </div>
+          <h3>Office Hours</h3>
+          <p>Our regular service times</p>
+          <strong>Sunday Service:</strong> 9:00 AM - 12:00 PM<br>
+          <strong>Bible Study:</strong> Wednesday 7:00 PM<br>
+          <strong>Prayer Meeting:</strong> Friday 6:00 PM
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
           </div>
           <h3>Location</h3>
           <p>Visit us at our physical location</p>
-          <a href="https://www.google.com/maps/place/Dzodze,+Ghana" class="contact-link">Dzodze, Volta Region<br>Ghana,
-            West Africa</a>
+          <address>
+            Dzodze, Volta Region<br>
+            Ghana, West Africa
+          </address>
+          <a href="https://www.google.com/maps/place/Dzodze,+Ghana" class="contact-link" target="_blank" aria-label="View location on Google Maps">View on Map</a>
         </div>
       </div>
+    </section>
+
+    <section class="contact-form-section">
+      <h2 class="section-title"><i class="fas fa-envelope-open"></i> Send us a Message</h2>
+      <form class="contact-form" action="#" method="post" aria-label="Contact form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </section>
+
+    <section class="location-map">
+      <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Find Us</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5!2d0.85!3d6.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzMnMDAuMCJOIDDCsDUxJzAwLjAiRQ!5e0!3m2!1sen!2sgh!4v1638360000000!5m2!1sen!2sgh"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          title="Church of Pentecost Dzodze Location Map">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <section class="newsletter-signup">
+    <div class="container">
+      <h2>Stay Connected</h2>
+      <p>Subscribe to receive updates about our services, events, and community news.</p>
+      <form class="newsletter-form" aria-label="Newsletter signup">
+        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+        <button type="submit" class="btn-newsletter">Subscribe</button>
+      </form>
     </div>
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Navigation functionality
-      const navLinks = document.querySelectorAll('.nav-link');
-      const pages = document.querySelectorAll('.page');
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  </section>
 
-      navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetPage = document.querySelector(this.getAttribute('href'));
-          pages.forEach(page => page.classList.remove('active'));
-          if (targetPage) targetPage.classList.add('active');
-        });
-      });
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Church of Pentecost Dzodze</h3>
+          <p>Transforming lives through faith, hope, and love in our digital ministry.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Church of Pentecost Dzodze. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-      if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function () {
-          document.body.classList.toggle('mobile-menu-open');
-        });
-      }
-    });
-  </script>
+  
 </body>
 
 </html>

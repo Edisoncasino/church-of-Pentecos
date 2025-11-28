@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Faith in Difficult Times",
+    "preacher": "Pastor John Doe",
+    "date": "2025-04-07",
+    "scripture": "James 1:2-4",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/VIDEO_ID_1",
+    "category": "faith"
+  },
+  {
+    "title": "Hope in Christ",
+    "preacher": "Evangelist Mary Smith",
+    "date": "2025-03-14",
+    "scripture": "Romans 15:13",
+    "type": "audio",
+    "url": "/audio/hope_in_christ.mp3",
+    "category": "hope"
+  },
+  {
+    "title": "Walking in Grace",
+    "preacher": "Pastor David Lee",
+    "date": "2025-02-28",
+    "scripture": "Ephesians 2:8-9",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/VIDEO_ID_2",
+    "category": "love"
+  },
+  {
+    "title": "The Power of Prayer",
+    "preacher": "Evangelist Sarah Johnson",
+    "date": "2025-02-14",
+    "scripture": "Philippians 4:6-7",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/VIDEO_ID_3",
+    "category": "wisdom"
+  },
+  {
+    "title": "Love Your Neighbor",
+    "preacher": "Pastor Michael Brown",
+    "date": "2025-01-31",
+    "scripture": "Matthew 22:39",
+    "type": "audio",
+    "url": "/audio/love_neighbor.mp3",
+    "category": "love"
+  },
+  {
+    "title": "Strength in Unity",
+    "preacher": "Pastor Robert Wilson",
+    "date": "2025-01-17",
+    "scripture": "Ecclesiastes 4:9-12",
+    "type": "video",
+    "url": "https://www.youtube.com/embed/VIDEO_ID_4",
+    "category": "faith"
+  }
+]
